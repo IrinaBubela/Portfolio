@@ -46,7 +46,9 @@
       <img class="ryby" src="img/ryby.jpg" alt="image" />
       <img class="icon icon1" src="icons/twitter.png" alt="image" />
       <img class="icon icon2" src="icons/linkedin.png" alt="image" />
-      <img class="icon icon3" src="icons/github-logo.png" alt="image" />
+      <a href="https://github.com/IrinaBubela/Project1"
+        ><img class="icon icon3" src="icons/github.svg" alt="image"
+      /></a>
       <img class="icon icon4" src="icons/instagram.svg" alt="image" />
       <h1>Front-End Web Developer</h1>
       <p id="name">Irina Bubela</p>
@@ -138,11 +140,9 @@
               <img class="icons icon1" src="icons/twitter.png" alt="image" />
               <img class="icons icon2" src="icons/linkedin.png" alt="image" />
               <img class="icons icon3" src="icons/instagram.svg" alt="image" />
-              <img
-                class="icons icon4"
-                src="icons/github-logo.png"
-                alt="image"
-              />
+              <a href="https://github.com/IrinaBubela/Project1"
+                ><img class="icons icon4" src="icons/github.svg" alt="image"
+              /></a>
             </div>
             <h5 class="h_four_designer">Designer<br />Poland, Wrocław</h5>
             <p id="adres">
@@ -209,6 +209,20 @@
         $(".menu-icon").on("click", function() {
           $("nav ul").toggleClass("showing");
         });
+      });
+
+      $("textarea").on("paste input", function() {
+        if ($(this).outerHeight() > this.scrollHeight) {
+          $(this).height(1);
+        }
+        while (
+          $(this).outerHeight() <
+          this.scrollHeight +
+            parseFloat($(this).css("borderTopWidth")) +
+            parseFloat($(this).css("borderBottomWidth"))
+        ) {
+          $(this).height($(this).height() + 1);
+        }
       });
     </script>
   </body>
