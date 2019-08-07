@@ -1,84 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>My portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" type="text/css" href="your_website_domain/css_root/flaticon.css">
-    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Montserrat:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="your_website_domain/css_root/flaticon.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=EB+Garamond|Montserrat:300,400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <header>
-
-        <nav>
-            <ul>
-                <li>Logo</li>
-                <li><a href="#about"> About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-
+      <nav>
+        <div class="menu-icon">
+          <img class="icon_menu" src="icons/menu.png" alt="image" />
+        </div>
+        <div class="logo">
+          LOGO
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="#about" class="nav-link nav-link-ltr"> About</a></li>
+            <li><a href="#skills" class="nav-link nav-link-ltr">Skills</a></li>
+            <li>
+              <a href="#portfolio" class="nav-link nav-link-ltr"> Portfolio</a>
+            </li>
+            <li>
+              <a href="#contact" class="nav-link nav-link-ltr">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <div class="home">
-        <img class="ryby" src="img/sora-sagano-Dksk8szLRN0-unsplash.jpg" alt="image">
-        <img class="icon icon1" src="icons/twitter.png" alt="image">
-        <img class="icon icon2" src="icons/linkedin.png" alt="image">
-        <img class="icon icon3" src="icons/instagram.png" alt="image">
-        <img class="icon icon4" src="icons/github-logo.png" alt="image">
-        <h1>Front-End Web Developer</h1>
-        <p id="name">Irina Bubela</p>
-        <h2>I'm happy to help you with any problems!</h2>
-        <div class="btn">
-            <button class="btn-home">Contact me!</button>
-            <button class="btn-home">Check my CV</button>
-        </div>
-        <h3>About me</h3>
-        <div id="about" class="about">
-            <img src="img/DSC_0452.jpg" alt="myphoto">
-            <div class="description" id="description">
-                <p><span> Full Name:</span> Irina Bubela</p>
-                <p><span>Age: </span>21</p>
-                <p><span>Profile:</span> Fullstack</p>
-                <p><span>Telephone:</span> +48 796-966-xxx</p>
-                <p><span>E-mail:</span> rishabubela@gmail.com</p>
-                <hr>
-            </div>
-            <p id="lorem_about">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet similique sapiente,
-                culpa
-                consequuntur ipsam quasi impedit odit iusto perferendis modi! Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Expedita repudiandae rerum eaque autem? Est mollitia perspiciatis, eos animi,
-                blanditiis ea quasi odio repellendus illo sed ipsa architecto officia nulla quia asperiores. Inventore
-                accusantium error adipisci dolore! Quas sed iure dolorem ad totam! Cum, cupiditate provident.
-                Lorem, ipsum dolor.
-            </p>
-        </div>
+      <img class="ryby" src="img/ryby.jpg" alt="image" />
+      <img class="icon icon1" src="icons/twitter.png" alt="image" />
+      <img class="icon icon2" src="icons/linkedin.png" alt="image" />
+      <img class="icon icon3" src="icons/github-logo.png" alt="image" />
+      <img class="icon icon4" src="icons/instagram.svg" alt="image" />
+      <h1>Front-End Web Developer</h1>
+      <p id="name">Irina Bubela</p>
+      <h2>I'm happy to help you with any problems!</h2>
+      <div class="btn">
+        <a href="#contact"><button class="button">Contact me!</button></a>
+        <a href="#portfolio"><button class="button">Check my CV</button></a>
+      </div>
     </div>
-    <div class="skills">
-        <ul>
-            <li>
-                <h1>UX/UI</h1>
-                <p>Figma</p>
-            </li>
-            <li>
-                <h1>Front-End</h1>
-                <p>HTML, CSS, JavaScript</p>
-            </li>
-            <li>
-                <h1>Back-End</h1>
-                <p>Python,Node.js</p>
-            </li>
-        </ul>
-    </div>
-    <div class="portfolio"></div>
-    <footer class="contact"></footer>
-</body>
 
+    <div id="about" class="about">
+      <h3>About me</h3>
+      <!-- <div class="about_container"> -->
+      <div class="split_about left_about">
+        <div class="centered">
+          <img src="img/DSC_0452.jpg" alt="myphoto" />
+          <div class="description_box" id="description">
+            <p><span> Full Name:</span> Irina Bubela</p>
+            <p><span>Age: </span>21</p>
+            <p><span>Profile:</span> Fullstack</p>
+            <p><span>Telephone:</span> +48 796-966-xxx</p>
+            <p><span>E-mail:</span> rishabubela@gmail.com</p>
+            <hr />
+          </div>
+        </div>
+      </div>
+      <div class="split_about right_about">
+        <div class="centered">
+          <p id="lorem_about">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet
+            similique sapiente, culpa consequuntur ipsam quasi impedit odit
+            iusto perferendis modi! Lorem ipsum dolor sit amet consequuntur
+            ipsam quasi impedit odit iusto perferendis modi! Lorem ipsum dolor
+            sit amet. consectetur adipisicing elit. Expedita repudiandae rerum
+            eaque autem? Est mollitia perspiciatis, eos animi, blanditiis ea
+            quasi odio repellendus illo sed ipsa architecto officia nulla quia
+            asperiores. Inventore accusantium error adipisci dolore! Quas sed
+            iure dolorem ad totam! Cum, cupiditate provident. Lorem, ipsum
+            dolor.
+          </p>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+    <div id="skills" class="skills">
+      <h3>Skills</h3>
+      <div class="flex_skills">
+        <div>
+          <img src="icons/data.png" alt="ui design" />
+          <h1>UX/UI</h1>
+          <p>Figma</p>
+        </div>
+        <div>
+          <img src="icons/content.png" alt="front-end" />
+          <h1>Front-End</h1>
+          <p>HTML, CSS, JavaScript</p>
+        </div>
+        <div>
+          <img src="icons/computer.png" alt="back-end" />
+          <h1>Back-End</h1>
+          <p>Python,Node.js</p>
+        </div>
+      </div>
+    </div>
+    <div id="portfolio" class="portfolio">
+      <h3>Portfolio</h3>
+      <div class="flex_portfolio">
+        <div>
+          <img src="img/digital-marketing-1725340_1920.jpg" alt="photo1" />
+        </div>
+        <div><img src="img/dolomites-4340337_1920.jpg" alt="photo" /></div>
+        <div><img src="img/office-932926_1920.jpg" alt="photo" /></div>
+        <div><img src="img/girl-1561989_1920.jpg" alt="photo" /></div>
+        <div><img src="img/dolomites-4347358_1920.jpg" alt="photo" /></div>
+        <div><img src="img/sunflower-4339580_1920.jpg" alt="photo" /></div>
+      </div>
+    </div>
+    <div id="contact" class="contact">
+      <div class="form_contact">
+        <h3>Contact me</h3>
+        <div class="split left">
+          <div class="first">
+            <img class="one_icon_contact" src="icons/chat.png" alt="email" />
+            <p>
+              Please describe your question! Send me a message and I will answer
+              you as soon as possible.
+            </p>
+            <div class="icons_contact">
+              <img class="icons icon1" src="icons/twitter.png" alt="image" />
+              <img class="icons icon2" src="icons/linkedin.png" alt="image" />
+              <img class="icons icon3" src="icons/instagram.svg" alt="image" />
+              <img
+                class="icons icon4"
+                src="icons/github-logo.png"
+                alt="image"
+              />
+            </div>
+            <h5 class="h_four_designer">Designer<br />Poland, Wrocław</h5>
+            <p id="adres">
+              ul.Tęczowa 12/3 50-000 <br />
+              +4850050055 <br />
+              love-coding@gmail.com
+            </p>
+          </div>
+        </div>
+        <div class="split right">
+          <form id="contact" action="" method="post">
+            <h4>Let's start!</h4>
+            <fieldset>
+              <input
+                class="place"
+                placeholder="Your name"
+                type="text"
+                tabindex="1"
+              />
+            </fieldset>
+            <fieldset>
+              <input
+                class="place"
+                placeholder="Your Email Address"
+                type="email"
+                tabindex="2"
+              />
+            </fieldset>
+            <fieldset>
+              <input
+                class="place"
+                placeholder="Topic"
+                type="topic"
+                tabindex="3"
+              />
+            </fieldset>
+            <fieldset>
+              <textarea placeholder="Message..." tabindex="5"></textarea>
+            </fieldset>
+            <fieldset>
+              <button
+                name="submit"
+                type="submit"
+                id="contact-submit"
+                data-submit="...Sending"
+              >
+                Submit
+              </button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div id="copyrights_container">
+        <div id="copyrights">
+          Copyrights Ⓒ 2019 Irina Bubela
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(".menu-icon").on("click", function() {
+          $("nav ul").toggleClass("showing");
+        });
+      });
+    </script>
+  </body>
 </html>
