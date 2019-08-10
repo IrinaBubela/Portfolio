@@ -4,6 +4,9 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
+  /* CODE_REVIEW nie wiem czy twoim celem było tutaj ustawienie box-sizing dla wszystkich elementów, ale 
+  box-sizing się nie dziedziczy, to samo tyczy się margin i padding. Jeśli chcesz ustawić dla 
+  wszystkich elementów to wówczas korzystaj z selektorów * oraz *::before i *::after */
   box-sizing: border-box;
 }
 
@@ -24,7 +27,7 @@ body {
 }
 
 /* NAVIGATION */
-
+/* CODE_REVIEW lepiej jak najmniej stylować po tagach html */
 header {
   width: 50vw;
   height: 99.9vh;
@@ -36,6 +39,8 @@ header {
 
 .logo {
   position: fixed;
+  /* CODE_REVIEW Nigdy nie używamy float: do pozycjonowania - używaj flex i grid albo 
+  position: relative/absolute ! */
   float: left;
   margin: 16px 36px;
   color: #444;
@@ -252,13 +257,13 @@ nav ul li a {
   margin-left: calc(50% - 150px);
 
 }
-
+/* CODE_REVIEW jeśli chodziło ci tutaj o szczególny .btn to lepsza nazwa klasy to np .btn-special */
 .btn1 {
   animation: jello-horizontal 0.9s both;
 }
 
 
-
+/* .btn i .button zbyt podobne */
 .button {
   margin-top: 8em;
   margin-right: 1em;
@@ -344,6 +349,7 @@ h3 {
 
 }
 
+/*CODE_REVIEW stylowanie po id - nie powinno się tego robić, lepiej nadawać unikalne klasy */
 #description p {
   margin: 7px;
   color: #f59948;
@@ -495,6 +501,9 @@ h3 {
   font-family: Raleway;
   font-style: normal;
   font-weight: 200;
+  /* CODE_REVIEW warto jest czcionki ustawiać relatywnie za pomocą jednostek rem i em - przydaje się przy
+  dynamicznym zmianom wielkości czcionki na stronie (np. powiększanie tekstu dla seniorów). Oczywiście 
+  często zasadne też są piksele */
   font-size: 18px;
   margin-bottom: 5em;
   letter-spacing: 0.04em;
@@ -543,12 +552,13 @@ h3 {
 }
 
 fieldset {
+  /*CODE_REVIEW zwykla da się nie użyć important - to jest zła praktyka, szczególnie przy stylowaniu po tagu */
   border: medium none !important;
   /* margisn: 0 0 50px; */
   min-width: 100%;
   width: 90%;
 }
-
+/* CODE_REVIEW czasami wygodnie używać selktora :not(), myślę, że tu by się nadał */
 #contact input[type="text"],
 #contact input[type="email"],
 #contact input[type="topic"],
@@ -604,7 +614,7 @@ fieldset {
 /* 912 912 912 912 912 912 912  */
 
 
-
+/* CODE_REVIEW warto jest napisać przy media na początku ,,only screen and'' - tak jest bezpieczniej */
 @media(max-width: 912px) {
 
   #contact-submit {
@@ -939,8 +949,6 @@ fieldset {
     margin-top: 9em;
   }
 
-
-
   /* about */
 
   /* skills */
@@ -1041,6 +1049,8 @@ fieldset {
 }
 
 @keyframes text {
+  /* CODE_REVIEW zamiast animować top/left/bottom/right powinno się używa tranform: translate() (i podobne).
+  To zwiększa wydajność animacji. */
   0% {
     top: 28vh;
   }
@@ -1102,3 +1112,11 @@ fieldset {
     transform: scale3d(1, 1, 1);
   }
 }
+
+
+/* CODE_REVIEW */
+/* Ogólnie css miał tylko kilka małych błędów, większośc w porządku. Trochę źle nazywasz tagi - polecam 
+poczytać o BEM - bardzo dobra metodologia nazywania css. Nie używasz zmiennych css (jak nie wiesz co to,
+to poszukaj) bardzo ułatwiają zarządzanie kodem. Np. w wielu miejscach używasz koloru #f59948. Gdybyś kiedyś
+zdecydowała się go zmienić, to będziesz musiała zmieniać to w każdym miejscu kodu. Lepiej jest użyć do tego
+zmiennej css.*/
